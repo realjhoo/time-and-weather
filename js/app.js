@@ -1,0 +1,274 @@
+function showDate() {
+   const days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+   ];
+
+   const months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+   ];
+
+   var today = new Date(),
+      day = today.getDay(),
+      dato = today.getDate(),
+      month = today.getMonth(),
+      year = today.getFullYear();
+
+   var fullDate = days[day] + ", " + dato + " " + months[month] + " " + year;
+
+   document.getElementById("xdate").innerHTML = fullDate;
+}
+
+function showTime() {
+   var today = new Date(),
+      hour = today.getHours(),
+      min = today.getMinutes();
+   var amPm;
+
+   if (hour < 12) {
+      amPm = "am";
+   } else if (hour >= 12) {
+      amPm = "pm";
+   }
+
+   if (hour > 12) {
+      hour -= 12;
+   } else if (hour == 0) {
+      hour = 12;
+   }
+
+   min = (parseInt(min, 10) < 10 ? "0" : "") + min; // with leading zero
+   var fullTime = hour + ":" + min;
+
+   document.getElementById("time").innerHTML = fullTime;
+   document.getElementById("ampm").innerHTML = amPm;
+}
+
+function setGreet() {
+   var today = new Date(),
+      hour = today.getHours(),
+      greeting = document.getElementById("greeting");
+
+   if (hour < 12) {
+      greeting.textContent = "Good morning, ";
+   } else if (hour < 18) {
+      greeting.textContent = "Good afternoon, ";
+   } else {
+      greeting.textContent = "Good evening, ";
+   }
+}
+
+function showPhase() {
+   const phase = [
+      "New Moon",
+      "Waxing Crescent Moon",
+      "First Quarter Moon",
+      "Waxing Gibbous Moon",
+      "Full Moon",
+      "Waning Gibbous Moon",
+      "Last Quarter Moon",
+      "Waning Crescent Moon"
+   ];
+   var c = (e = jd = b = 0);
+   var today = new Date(),
+      dato = today.getDate(),
+      month = today.getMonth(),
+      year = today.getFullYear();
+
+   if (month < 3) {
+      year--; // apparently the year begins in April
+      month += 12;
+   }
+
+   month++;
+
+   c = 365.25 * year; //no. of days since year 0
+   e = 30.6 * month; //no. of days this month
+   jd = c + e + dato - 694039.09; // current julian day - julian day for 1900.01.01 (a known full moon)
+   jd /= 29.5305882; // divided by the lunar cycle, giving lunation rounded to nearest whole day
+   b = parseInt(jd); // discard fraction
+   jd -= b; // subtract the integer from the julian day, leaving the fractional part
+   b = Math.round(jd * 8); // divide into pieces of eight
+
+   if (b >= 8) {
+      b = 0; // 0 and 8 are the same, so, reset
+   }
+
+   document.getElementById("moonphase").innerHTML = phase[b];
+}
+
+function getMessage() {
+   var today = new Date();
+
+   if (today.getMonth() === 1 && today.getDate() === 1) {
+      return "New Year's Day";
+   } else if (today.getMonth() === 0 && today.getDate() === 25) {
+      return "You & Me Day";
+   } else if (today.getMonth() === 1 && today.getDate() === 14) {
+      return "Cam's Birthday";
+   } else if (today.getMonth() === 2 && today.getDate() === 17) {
+      return "St Patrick's Day";
+   } else if (today.getMonth() === 4 && today.getDate() === 25) {
+      return "St. Bede's Day";
+   } else if (today.getMonth() === 5 && today.getDate() === 11) {
+      return "Anniversary";
+   } else if (today.getMonth() === 5 && today.getDate() === 14) {
+      return "Flag Day";
+   } else if (today.getMonth() === 5 && today.getDate() === 21) {
+      return "Ancestors Day";
+   } else if (today.getMonth() === 5 && today.getDate() === 24) {
+      return "Penny the Dog Day";
+   } else if (today.getMonth() === 6 && today.getDate() === 2) {
+      return "Dad's Birthday";
+   } else if (today.getMonth() === 6 && today.getDate() === 4) {
+      return "Independence Day";
+   } else if (today.getMonth() === 6 && today.getDate() === 6) {
+      return "Happy Birthday!";
+   } else if (today.getMonth() === 6 && today.getDate() === 31) {
+      return "Lisa's Birthday";
+   } else if (today.getMonth() === 7 && today.getDate() === 1) {
+      return "Swiss National Day";
+   } else if (today.getMonth() === 8 && today.getDate() === 27) {
+      return "Hans arrived in America (1710)";
+   } else if (today.getMonth() === 9 && today.getDate() === 31) {
+      return "Halloween";
+   } else if (today.getMonth() === 10 && today.getDate() === 11) {
+      return "Veteran's Day";
+   } else if (today.getMonth() === 11 && today.getDate() === 24) {
+      return "Yule Eve";
+   } else if (today.getMonth() === 11 && today.getDate() === 25) {
+      return "Yule";
+   } else if (today.getMonth() === 11 && today.getDate() === 31) {
+      return "New Year's Eve";
+   } else {
+      return "random";
+   }
+}
+
+function rndMessage() {
+   const randomMessages = [
+      "You matter",
+      "Never stop dreaming",
+      "Be creative",
+      "Live simply",
+      "Remember who you are",
+      "Trust your intuition",
+      "Choose joy",
+      "Be yourself",
+      "Focus on the positive",
+      "Create",
+      "Shouldn't you be coding?",
+      "Hail, Thunar!",
+      "We invented everything",
+      "Beagle nationalism",
+      "Honor your ancestors",
+      "Today's the day",
+      "Be a jarl",
+      "I created this",
+      "The first Noble Virtue is Courage",
+      "The second Noble Virtue is Truth",
+      "The third Noble Virtue is Honor",
+      "The fourth Noble Virtue is Fidelity",
+      "The fifth Noble Virtue is Discipline",
+      "The sixth Noble Virtue is Hospitality",
+      "The seventh Noble Virtue is Self-Reliance",
+      "The eighth Noble Virtue is Industriousness",
+      "The ninth Noble Virtue is Perseverance",
+      "Strength is better than weakness",
+      "Courage is better than cowardice",
+      "Joy is better than guilt",
+      "Honor is better than dishonor",
+      "Freedom is better than slavery",
+      "Kinship is better than alienation",
+      "Realism is better than dogmatism",
+      "Vigor is better than lifelessness",
+      "Ancestry is better than rootlessness"
+   ];
+   var max = randomMessages.length;
+   var rndNum = Math.floor(Math.random() * max);
+   return randomMessages[rndNum];
+}
+
+function showMessage() {
+   var message = "";
+   message = getMessage();
+
+   if (message == "random") {
+      message = rndMessage();
+   }
+
+   document.getElementById("message").innerHTML = message;
+}
+
+function showWeather() {
+   var lat, long;
+   var temp = document.getElementById("temperature"),
+      deg = document.getElementById("degree"),
+      summ = document.getElementById("summary");
+
+   if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(position => {
+         lat = position.coords.latitude;
+         long = position.coords.longitude;
+         const proxy = "https://cors-anywhere.herokuapp.com/";
+         const api = `${proxy}https://api.darksky.net/forecast/fc6838719bc5539953da7994c98bd6c6/${lat},${long}`;
+
+         fetch(api)
+            .then(weather_data => {
+               return weather_data.json();
+            })
+            .then(weather_data => {
+               const { temperature } = weather_data.currently;
+               const { summary } = weather_data.currently;
+               // conventially written as:
+               // const temperature = weather_data.currently.temperature;
+
+               temp.textContent = "It's currently " + parseInt(temperature);
+               deg.innerHTML = "&#176;";
+               summ.textContent = "  and " + summary.toLowerCase();
+            });
+      });
+   } else {
+      // geolocation does not work
+      document.getElementById("temperature").textContent =
+         "Unable to retrieve weather.";
+      //     // this could be replaced by hard code for SLTX and API call
+      //     // if that also doesn't work, then display the above error msg
+   }
+}
+
+function main() {
+   showDate();
+   showTime();
+   setGreet();
+   showPhase();
+   showWeather();
+   var now = new Date(),
+      hour = now.getHours(),
+      minute = now.getMinutes(),
+      seconds = now.getSeconds();
+
+   if (hour == 0 && minute == 0 && seconds <= 7) {
+      showMessage();
+   }
+   setTimeout(main, 5000);
+}
+
+showMessage(); // set initial message
+main();
