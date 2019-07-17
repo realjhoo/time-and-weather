@@ -1,0 +1,173 @@
+WEATHER OBJECT RETURNED
+
+{latitude: 29.6263476, longitude: -95.62868979999999, timezone: "America/Chicago", currently: {…}, minutely: {…}, …}
+currently:
+apparentTemperature: 92.45
+cloudCover: 0.12
+dewPoint: 73.64
+humidity: 0.69
+icon: "clear-day"
+nearestStormBearing: 19
+nearestStormDistance: 67
+ozone: 295.3
+precipIntensity: 0
+precipProbability: 0
+pressure: 1015.92
+summary: "Humid"
+temperature: 85.12
+time: 1563326298
+uvIndex: 0
+visibility: 9.772
+windBearing: 170
+windGust: 7.44
+windSpeed: 7.44
+__proto__: Object
+daily:
+data: Array(8)
+0: {time: 1563253200, summary: "Humid and partly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563276851, sunsetTime: 1563326716, …}
+1: {time: 1563339600, summary: "Humid and mostly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563363284, sunsetTime: 1563413093, …}
+2: {time: 1563426000, summary: "Humid and partly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563449717, sunsetTime: 1563499470, …}
+3: {time: 1563512400, summary: "Humid and partly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563536151, sunsetTime: 1563585845, …}
+4: {time: 1563598800, summary: "Humid and mostly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563622585, sunsetTime: 1563672219, …}
+5: {time: 1563685200, summary: "Humid and mostly cloudy throughout the day.", icon: "partly-cloudy-day", sunriseTime: 1563709019, sunsetTime: 1563758591, …}
+6: {time: 1563771600, summary: "Humid and partly cloudy throughout the day.", icon: "rain", sunriseTime: 1563795453, sunsetTime: 1563844962, …}
+7: {time: 1563858000, summary: "Light rain in the morning and afternoon.", icon: "rain", sunriseTime: 1563881888, sunsetTime: 1563931332, …}
+length: 8
+__proto__: Array(0)
+icon: "rain"
+summary: "Light rain on Monday and next Tuesday, with high temperatures falling to 83°F next Tuesday."
+__proto__: Object
+flags:
+nearest-station: 1.435
+sources: (11) ["nwspa", "cmc", "gfs", "hrrr", "icon", "isd", "madis", "nam", "sref", "darksky", "nearest-precip"]
+units: "us"
+__proto__: Object
+hourly:
+data: Array(49)
+0: {time: 1563325200, summary: "Humid", icon: "clear-day", precipIntensity: 0, precipProbability: 0, …}
+1: {time: 1563328800, summary: "Humid", icon: "clear-night", precipIntensity: 0, precipProbability: 0, …}
+2: {time: 1563332400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+3: {time: 1563336000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.001, precipProbability: 0.01, …}
+4: {time: 1563339600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+5: {time: 1563343200, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.002, precipProbability: 0.01, …}
+6: {time: 1563346800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+7: {time: 1563350400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.001, precipProbability: 0.01, …}
+8: {time: 1563354000, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.001, precipProbability: 0.01, …}
+9: {time: 1563357600, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+10: {time: 1563361200, summary: "Humid and Overcast", icon: "cloudy", precipIntensity: 0.004, precipProbability: 0.02, …}
+11: {time: 1563364800, summary: "Humid and Overcast", icon: "cloudy", precipIntensity: 0.007, precipProbability: 0.02, …}
+12: {time: 1563368400, summary: "Humid and Overcast", icon: "cloudy", precipIntensity: 0.001, precipProbability: 0.01, …}
+13: {time: 1563372000, summary: "Humid and Overcast", icon: "cloudy", precipIntensity: 0.001, precipProbability: 0.01, …}
+14: {time: 1563375600, summary: "Humid and Overcast", icon: "cloudy", precipIntensity: 0, precipProbability: 0, …}
+15: {time: 1563379200, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.001, precipProbability: 0.01, …}
+16: {time: 1563382800, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.002, precipProbability: 0.01, …}
+17: {time: 1563386400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.004, precipProbability: 0.01, …}
+18: {time: 1563390000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.005, precipProbability: 0.01, …}
+19: {time: 1563393600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.007, precipProbability: 0.01, …}
+20: {time: 1563397200, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.007, precipProbability: 0.02, …}
+21: {time: 1563400800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.004, precipProbability: 0.01, …}
+22: {time: 1563404400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.001, precipProbability: 0.01, …}
+23: {time: 1563408000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0, precipProbability: 0, …}
+24: {time: 1563411600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0, precipProbability: 0, …}
+25: {time: 1563415200, summary: "Humid", icon: "clear-night", precipIntensity: 0, precipProbability: 0, …}
+26: {time: 1563418800, summary: "Humid", icon: "clear-night", precipIntensity: 0, precipProbability: 0, …}
+27: {time: 1563422400, summary: "Humid", icon: "clear-night", precipIntensity: 0, precipProbability: 0, …}
+28: {time: 1563426000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+29: {time: 1563429600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+30: {time: 1563433200, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+31: {time: 1563436800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0, precipProbability: 0, …}
+32: {time: 1563440400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.001, precipProbability: 0.01, …}
+33: {time: 1563444000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.002, precipProbability: 0.01, …}
+34: {time: 1563447600, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-night", precipIntensity: 0.006, precipProbability: 0.02, …}
+35: {time: 1563451200, summary: "Humid and Mostly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.009, precipProbability: 0.02, …}
+36: {time: 1563454800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.005, precipProbability: 0.02, …}
+37: {time: 1563458400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.001, precipProbability: 0.01, …}
+38: {time: 1563462000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0, precipProbability: 0, …}
+39: {time: 1563465600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.001, precipProbability: 0.01, …}
+40: {time: 1563469200, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.003, precipProbability: 0.01, …}
+41: {time: 1563472800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.005, precipProbability: 0.01, …}
+42: {time: 1563476400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.004, precipProbability: 0.01, …}
+43: {time: 1563480000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.003, precipProbability: 0.01, …}
+44: {time: 1563483600, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.004, precipProbability: 0.01, …}
+45: {time: 1563487200, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.002, precipProbability: 0.01, …}
+46: {time: 1563490800, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0.001, precipProbability: 0.01, …}
+47: {time: 1563494400, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0, precipProbability: 0, …}
+48: {time: 1563498000, summary: "Humid and Partly Cloudy", icon: "partly-cloudy-day", precipIntensity: 0, precipProbability: 0, …}
+length: 49
+__proto__: Array(0)
+icon: "partly-cloudy-day"
+summary: "Humid and mostly cloudy throughout the day."
+__proto__: Object
+latitude: 29.6263476
+longitude: -95.62868979999999
+minutely:
+data: Array(61)
+0: {time: 1563326280, precipIntensity: 0, precipProbability: 0}
+1: {time: 1563326340, precipIntensity: 0, precipProbability: 0}
+2: {time: 1563326400, precipIntensity: 0, precipProbability: 0}
+3: {time: 1563326460, precipIntensity: 0, precipProbability: 0}
+4: {time: 1563326520, precipIntensity: 0, precipProbability: 0}
+5: {time: 1563326580, precipIntensity: 0, precipProbability: 0}
+6: {time: 1563326640, precipIntensity: 0, precipProbability: 0}
+7: {time: 1563326700, precipIntensity: 0, precipProbability: 0}
+8: {time: 1563326760, precipIntensity: 0, precipProbability: 0}
+9: {time: 1563326820, precipIntensity: 0, precipProbability: 0}
+10: {time: 1563326880, precipIntensity: 0, precipProbability: 0}
+11: {time: 1563326940, precipIntensity: 0, precipProbability: 0}
+12: {time: 1563327000, precipIntensity: 0, precipProbability: 0}
+13: {time: 1563327060, precipIntensity: 0, precipProbability: 0}
+14: {time: 1563327120, precipIntensity: 0, precipProbability: 0}
+15: {time: 1563327180, precipIntensity: 0, precipProbability: 0}
+16: {time: 1563327240, precipIntensity: 0, precipProbability: 0}
+17: {time: 1563327300, precipIntensity: 0, precipProbability: 0}
+18: {time: 1563327360, precipIntensity: 0, precipProbability: 0}
+19: {time: 1563327420, precipIntensity: 0, precipProbability: 0}
+20: {time: 1563327480, precipIntensity: 0, precipProbability: 0}
+21: {time: 1563327540, precipIntensity: 0, precipProbability: 0}
+22: {time: 1563327600, precipIntensity: 0, precipProbability: 0}
+23: {time: 1563327660, precipIntensity: 0, precipProbability: 0}
+24: {time: 1563327720, precipIntensity: 0, precipProbability: 0}
+25: {time: 1563327780, precipIntensity: 0, precipProbability: 0}
+26: {time: 1563327840, precipIntensity: 0, precipProbability: 0}
+27: {time: 1563327900, precipIntensity: 0, precipProbability: 0}
+28: {time: 1563327960, precipIntensity: 0, precipProbability: 0}
+29: {time: 1563328020, precipIntensity: 0, precipProbability: 0}
+30: {time: 1563328080, precipIntensity: 0, precipProbability: 0}
+31: {time: 1563328140, precipIntensity: 0, precipProbability: 0}
+32: {time: 1563328200, precipIntensity: 0, precipProbability: 0}
+33: {time: 1563328260, precipIntensity: 0, precipProbability: 0}
+34: {time: 1563328320, precipIntensity: 0, precipProbability: 0}
+35: {time: 1563328380, precipIntensity: 0, precipProbability: 0}
+36: {time: 1563328440, precipIntensity: 0, precipProbability: 0}
+37: {time: 1563328500, precipIntensity: 0, precipProbability: 0}
+38: {time: 1563328560, precipIntensity: 0, precipProbability: 0}
+39: {time: 1563328620, precipIntensity: 0, precipProbability: 0}
+40: {time: 1563328680, precipIntensity: 0, precipProbability: 0}
+41: {time: 1563328740, precipIntensity: 0, precipProbability: 0}
+42: {time: 1563328800, precipIntensity: 0, precipProbability: 0}
+43: {time: 1563328860, precipIntensity: 0, precipProbability: 0}
+44: {time: 1563328920, precipIntensity: 0, precipProbability: 0}
+45: {time: 1563328980, precipIntensity: 0, precipProbability: 0}
+46: {time: 1563329040, precipIntensity: 0, precipProbability: 0}
+47: {time: 1563329100, precipIntensity: 0, precipProbability: 0}
+48: {time: 1563329160, precipIntensity: 0, precipProbability: 0}
+49: {time: 1563329220, precipIntensity: 0, precipProbability: 0}
+50: {time: 1563329280, precipIntensity: 0, precipProbability: 0}
+51: {time: 1563329340, precipIntensity: 0, precipProbability: 0}
+52: {time: 1563329400, precipIntensity: 0, precipProbability: 0}
+53: {time: 1563329460, precipIntensity: 0, precipProbability: 0}
+54: {time: 1563329520, precipIntensity: 0, precipProbability: 0}
+55: {time: 1563329580, precipIntensity: 0, precipProbability: 0}
+56: {time: 1563329640, precipIntensity: 0, precipProbability: 0}
+57: {time: 1563329700, precipIntensity: 0, precipProbability: 0}
+58: {time: 1563329760, precipIntensity: 0, precipProbability: 0}
+59: {time: 1563329820, precipIntensity: 0, precipProbability: 0}
+60: {time: 1563329880, precipIntensity: 0, precipProbability: 0}
+length: 61
+__proto__: Array(0)
+icon: "clear-day"
+summary: "Humid for the hour."
+__proto__: Object
+offset: -5
+timezone: "America/Chicago"
+__proto__: Object
