@@ -1,2 +1,3 @@
 # time-and-weather
- Modern browser version of kindle-clock-weather
+ Uses API calls for time, weather and moon-phase clock.
+ Modern browser version of my Kindle Clock project
