@@ -1,3 +1,4 @@
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function showDate() {
    const days = [
       "Sunday",
@@ -24,22 +25,23 @@ function showDate() {
       "December"
    ];
 
-   var today = new Date(),
+   let today = new Date(),
       day = today.getDay(),
       dato = today.getDate(),
       month = today.getMonth(),
       year = today.getFullYear();
 
-   var fullDate = days[day] + ", " + dato + " " + months[month] + " " + year;
+   let fullDate = days[day] + ", " + dato + " " + months[month] + " " + year;
 
    document.getElementById("xdate").innerHTML = fullDate;
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function showTime() {
-   var today = new Date(),
+   let today = new Date(),
       hour = today.getHours(),
       min = today.getMinutes();
-   var amPm;
+   let amPm;
 
    if (hour < 12) {
       amPm = "am";
@@ -54,26 +56,34 @@ function showTime() {
    }
 
    min = (parseInt(min, 10) < 10 ? "0" : "") + min; // with leading zero
-   var fullTime = hour + ":" + min;
+   let fullTime = hour + ":" + min;
 
    document.getElementById("time").innerHTML = fullTime;
    document.getElementById("ampm").innerHTML = amPm;
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function setGreet() {
-   var today = new Date(),
+   let today = new Date(),
       hour = today.getHours(),
       greeting = document.getElementById("greeting");
 
    if (hour < 12) {
       greeting.textContent = "Good morning, ";
+      document.body.style.backgroundImage = "url('../img/morning.jpeg')";
+      document.body.style.color = "#ddd";
    } else if (hour < 18) {
       greeting.textContent = "Good afternoon, ";
+      document.body.style.backgroundImage = "url('../img/afternoon.jpeg')";
+      document.body.style.color = "#333";
    } else {
       greeting.textContent = "Good evening, ";
+      document.body.style.backgroundImage = "url('../img/evening.jpeg')";
+      document.body.style.color = "#ddd";
    }
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function showPhase() {
    const phase = [
       "New Moon",
@@ -85,8 +95,8 @@ function showPhase() {
       "Last Quarter Moon",
       "Waning Crescent Moon"
    ];
-   var c = (e = jd = b = 0);
-   var today = new Date(),
+   let c = (e = jd = b = 0);
+   let today = new Date(),
       dato = today.getDate(),
       month = today.getMonth(),
       year = today.getFullYear();
@@ -113,10 +123,11 @@ function showPhase() {
    document.getElementById("moonphase").innerHTML = phase[b];
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function getMessage() {
-   var today = new Date();
+   let today = new Date();
 
-   if (today.getMonth() === 1 && today.getDate() === 1) {
+   if (today.getMonth() === 0 && today.getDate() === 1) {
       return "New Year's Day";
    } else if (today.getMonth() === 0 && today.getDate() === 25) {
       return "You & Me Day";
@@ -161,6 +172,7 @@ function getMessage() {
    }
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function rndMessage() {
    const randomMessages = [
       "You matter",
@@ -200,13 +212,14 @@ function rndMessage() {
       "Vigor is better than lifelessness",
       "Ancestry is better than rootlessness"
    ];
-   var max = randomMessages.length;
-   var rndNum = Math.floor(Math.random() * max);
+   let max = randomMessages.length;
+   let rndNum = Math.floor(Math.random() * max);
    return randomMessages[rndNum];
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function showMessage() {
-   var message = "";
+   let message = "";
    message = getMessage();
 
    if (message == "random") {
@@ -216,10 +229,11 @@ function showMessage() {
    document.getElementById("message").innerHTML = message;
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 function showWeather() {
-   var lat, long;
-   var temp = document.getElementById("temperature"),
-      deg = document.getElementById("degree"),
+   let lat, long;
+   let temp = document.getElementById("temperature"),
+      heat_index = document.getElementById("heat-index"),
       summ = document.getElementById("summary");
 
    if (navigator.geolocation) {
@@ -236,39 +250,77 @@ function showWeather() {
             .then(weather_data => {
                const { temperature } = weather_data.currently;
                const { summary } = weather_data.currently;
-               // conventially written as:
-               // const temperature = weather_data.currently.temperature;
+               const { apparentTemperature } = weather_data.currently;
 
-               temp.textContent = "It's currently " + parseInt(temperature);
-               deg.innerHTML = "&#176;";
-               summ.textContent = "  and " + summary.toLowerCase();
+               temp.innerHTML =
+                  "Temperature: " + parseInt(temperature) + "&#176;";
+               heat_index.innerHTML =
+                  "Heat index: " + parseInt(apparentTemperature) + "&#176;";
+               summ.textContent = "Currently, it's " + summary.toLowerCase();
             });
       });
    } else {
       // geolocation does not work
       document.getElementById("temperature").textContent =
          "Unable to retrieve weather.";
-      //     // this could be replaced by hard code for SLTX and API call
-      //     // if that also doesn't work, then display the above error msg
+   }
+   setTimeout(showWeather, 300000);
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+function getName() {
+   let name = document.getElementById("name");
+   if (localStorage.getItem("name") === null) {
+      name.textContent = "[Enter Name]";
+   } else {
+      name.textContent = localStorage.getItem("name");
    }
 }
 
-function main() {
-   showDate();
-   showTime();
-   setGreet();
-   showPhase();
-   showWeather();
-   var now = new Date(),
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+function setName(event) {
+   let name = document.getElementById("name");
+   if (event.type === "keypress") {
+      if (event.which == 13 || event.keycode == 13) {
+         localStorage.setItem("name", event.target.innerText);
+         name.blur();
+      }
+   } else {
+      localStorage.setItem("name", event.target.innerText);
+   }
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+function changeMessage() {
+   let now = new Date(),
       hour = now.getHours(),
       minute = now.getMinutes(),
       seconds = now.getSeconds();
 
    if (hour == 0 && minute == 0 && seconds <= 7) {
-      showMessage();
+      showMessage(); // change the message at midnight
    }
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+function initialize() {
+   showMessage(); // set initial message
+   showWeather(); // show initial weather
+   getName();
+   let name = document.getElementById("name");
+   name.addEventListener("keypress", setName);
+}
+
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+function main() {
+   showDate();
+   showTime();
+   setGreet();
+   showPhase();
+   changeMessage();
    setTimeout(main, 5000);
 }
 
-showMessage(); // set initial message
+// =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+initialize();
 main();
