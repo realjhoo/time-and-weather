@@ -70,15 +70,15 @@ function setGreet() {
 
    if (hour < 12) {
       greeting.textContent = "Good morning, ";
-      document.body.style.backgroundImage = "url('../img/morning.jpeg')";
+      document.body.style.backgroundImage = "url('img/morning.jpeg')";
       document.body.style.color = "#ddd";
    } else if (hour < 18) {
       greeting.textContent = "Good afternoon, ";
-      document.body.style.backgroundImage = "url('../img/afternoon.jpeg')";
+      document.body.style.backgroundImage = "url('img/afternoon.jpeg')";
       document.body.style.color = "#333";
    } else {
       greeting.textContent = "Good evening, ";
-      document.body.style.backgroundImage = "url('../img/evening.jpeg')";
+      document.body.style.backgroundImage = "url('img/evening.jpeg')";
       document.body.style.color = "#ddd";
    }
 }
