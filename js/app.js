@@ -256,7 +256,7 @@ function showWeather() {
                   "Temperature: " + parseInt(temperature) + "&#176;";
                heat_index.innerHTML =
                   "Heat index: " + parseInt(apparentTemperature) + "&#176;";
-               summ.textContent = "Currently, it's " + summary.toLowerCase();
+               summ.textContent = "Currently, " + summary.toLowerCase();
             });
       });
    } else {
